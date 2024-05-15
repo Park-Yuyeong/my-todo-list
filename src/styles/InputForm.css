@@ -1,0 +1,52 @@
+#input-div {
+  display: flex;
+  flex-direction: row;
+
+  padding: 25px;
+  margin: 5px 0px;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-component-color);
+  border-radius: 12px;
+
+  font-size: 20px;
+}
+
+label {
+  min-width: fit-content;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  margin-right: 30px;
+  padding: 8px 10px;
+
+  color: var(--bg-main-color);
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 3px solid var(--bg-main-color);
+}
+
+input::placeholder {
+  font-size: 12px;
+  color: var(--bg-layout-color);
+}
+
+#input-title {
+  width: 150px;
+}
+
+#input-content {
+  width: 500px;
+}
+
+#input-div > button {
+  min-width: fit-content;
+  margin-left: auto;
+  background-color: var(--bg-main-color);
+}
