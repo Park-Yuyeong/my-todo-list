@@ -28,8 +28,9 @@ p {
   overflow: hidden;
   word-break: break-all;
   word-wrap: break-word;
+  line-height: 1.4;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
