@@ -9,9 +9,6 @@ function App() {
 
   // todo list 추가
   const addTodoList = (title, content) => {
-    // 빈 문자열 입력 시 리스트에 추가 안 됨
-    if (!(title.length && content.length)) return;
-
     const newTodoList = {
       id: new Date().getTime(),
       title: title,
@@ -32,10 +29,7 @@ function App() {
 
   // todo list 상태 변환
   const changeListState = (id) => {
-    const todoListState = todoList.map((item) => {
-      if (item.id === id) item.isCompleted = !item.isCompleted;
-      return item;
-    });
+    const todoListState = todoList.map((item) => (item.id === id ? { ...item, isCompleted: !item.isCompleted } : item));
 
     localStorage.setItem("todo-list", JSON.stringify(todoListState));
     setTodoList(todoListState);

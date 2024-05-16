@@ -16,6 +16,7 @@
 
 label {
   min-width: fit-content;
+  cursor: pointer;
 }
 
 input {
