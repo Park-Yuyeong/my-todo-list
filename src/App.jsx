@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "../styles/App.css";
-import Header from "./Header.jsx";
-import InputForm from "./InputForm";
-import ListSection from "./ListSection";
+import "./App.css";
+import Header from "./components/Header";
+import InputForm from "./components/InputForm";
+import ListSection from "./components/ListSection";
 
 function App() {
   const [todoList, setTodoList] = useState(JSON.parse(localStorage.getItem("todo-list")) ?? []);

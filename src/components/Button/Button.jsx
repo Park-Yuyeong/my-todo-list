@@ -1,4 +1,4 @@
-import "../styles/Button.css";
+import "./Button.css";
 
 const Button = ({ children, onClick }) => {
   return <button onClick={onClick}>{children}</button>;

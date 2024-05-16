@@ -1,5 +1,5 @@
-import "../styles/ListSection.css";
-import ListItem from "./ListItem";
+import ListItem from "../ListItem";
+import "./ListSection.css";
 
 const ListSection = ({ children, isCompleted, todoList, deleteTodoList, changeListState }) => {
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "../styles/InputForm.css";
-import Button from "./Button";
+import Button from "../Button";
+import "./InputForm.css";
 
 const InputForm = ({ addTodoList }) => {
   const [title, setTitle] = useState("");

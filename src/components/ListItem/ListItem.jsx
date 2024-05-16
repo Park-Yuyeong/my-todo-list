@@ -1,5 +1,5 @@
-import "../styles/ListItem.css";
-import Button from "./Button";
+import Button from "../Button";
+import "./ListItem.css";
 
 const ListItem = ({ item, deleteTodoList, changeListState }) => {
   const { id, title, content, isCompleted } = item;
