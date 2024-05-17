@@ -5,7 +5,11 @@ import InputForm from "./components/InputForm";
 import ListSection from "./components/ListSection";
 
 function App() {
+  // 로컬 스토리지에서 todo list 데이터 불러오기
   const [todoList, setTodoList] = useState(JSON.parse(localStorage.getItem("todo-list")) ?? []);
+
+  // 로컬 스토리지에 todo list 데이터 저장하기
+  const saveTodoList = (lst) => localStorage.setItem("todo-list", JSON.stringify(lst));
 
   // todo list 추가
   const addTodoList = (title, content) => {
@@ -16,14 +20,15 @@ function App() {
       isCompleted: false
     };
 
-    localStorage.setItem("todo-list", JSON.stringify([...todoList, newTodoList]));
+    saveTodoList([...todoList, newTodoList]);
     setTodoList([...todoList, newTodoList]);
   };
 
   // todo list 삭제
   const deleteTodoList = (id) => {
     const deletedTodoList = todoList.filter((item) => item.id !== id);
-    localStorage.setItem("todo-list", JSON.stringify(deletedTodoList));
+
+    saveTodoList(deletedTodoList);
     setTodoList(deletedTodoList);
   };
 
@@ -31,7 +36,7 @@ function App() {
   const changeListState = (id) => {
     const todoListState = todoList.map((item) => (item.id === id ? { ...item, isCompleted: !item.isCompleted } : item));
 
-    localStorage.setItem("todo-list", JSON.stringify(todoListState));
+    saveTodoList(todoList);
     setTodoList(todoListState);
   };
 
