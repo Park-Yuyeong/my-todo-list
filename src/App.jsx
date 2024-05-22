@@ -36,7 +36,7 @@ function App() {
   const changeListState = (id) => {
     const todoListState = todoList.map((item) => (item.id === id ? { ...item, isCompleted: !item.isCompleted } : item));
 
-    saveTodoList(todoList);
+    saveTodoList(todoListState);
     setTodoList(todoListState);
   };
 
